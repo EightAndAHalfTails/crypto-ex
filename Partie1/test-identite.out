@@ -1,0 +1,231 @@
+Test de la presence de l'executable
+OK
+Test d'identité sur des mots de 16 bits
+  Test 1
+    Clé = 2dfa3d43161d99bbc314
+    Entrée = 82b9
+    Ligne de commande = echo -n 82b9 | ./minicipher -k "2dfa3d43161d99bbc314" 2>&1
+    Sortie = 4bae
+    Ligne de commande = echo -n 4bae | ./minicipher -d -k "2dfa3d43161d99bbc314" 2>&1
+    Sortie après déchiffrement = 82b9
+         OK
+
+  Test 2
+    Clé = 1074741572ff21292bb9
+    Entrée = fb2a
+    Ligne de commande = echo -n fb2a | ./minicipher -k "1074741572ff21292bb9" 2>&1
+    Sortie = e7f8
+    Ligne de commande = echo -n e7f8 | ./minicipher -d -k "1074741572ff21292bb9" 2>&1
+    Sortie après déchiffrement = fb2a
+         OK
+
+  Test 3
+    Clé = d2ba694e16d2235d823f
+    Entrée = 4a72
+    Ligne de commande = echo -n 4a72 | ./minicipher -k "d2ba694e16d2235d823f" 2>&1
+    Sortie = f9a1
+    Ligne de commande = echo -n f9a1 | ./minicipher -d -k "d2ba694e16d2235d823f" 2>&1
+    Sortie après déchiffrement = 4a72
+         OK
+
+  Test 4
+    Clé = e7526e92b677285dcfbe
+    Entrée = 6525
+    Ligne de commande = echo -n 6525 | ./minicipher -k "e7526e92b677285dcfbe" 2>&1
+    Sortie = 01f2
+    Ligne de commande = echo -n 01f2 | ./minicipher -d -k "e7526e92b677285dcfbe" 2>&1
+    Sortie après déchiffrement = 6525
+         OK
+
+  Test 5
+    Clé = c20bf01b406d0cff358e
+    Entrée = a064
+    Ligne de commande = echo -n a064 | ./minicipher -k "c20bf01b406d0cff358e" 2>&1
+    Sortie = 9e39
+    Ligne de commande = echo -n 9e39 | ./minicipher -d -k "c20bf01b406d0cff358e" 2>&1
+    Sortie après déchiffrement = a064
+         OK
+
+  Test 6
+    Clé = 1e68376cf49f3a9c9c7a
+    Entrée = 45d5
+    Ligne de commande = echo -n 45d5 | ./minicipher -k "1e68376cf49f3a9c9c7a" 2>&1
+    Sortie = 2296
+    Ligne de commande = echo -n 2296 | ./minicipher -d -k "1e68376cf49f3a9c9c7a" 2>&1
+    Sortie après déchiffrement = 45d5
+         OK
+
+  Test 7
+    Clé = fcbea85e883d41fa1aff
+    Entrée = 6c4e
+    Ligne de commande = echo -n 6c4e | ./minicipher -k "fcbea85e883d41fa1aff" 2>&1
+    Sortie = 1d16
+    Ligne de commande = echo -n 1d16 | ./minicipher -d -k "fcbea85e883d41fa1aff" 2>&1
+    Sortie après déchiffrement = 6c4e
+         OK
+
+  Test 8
+    Clé = 146b0a724e1d3aa4d2ac
+    Entrée = 4f2f
+    Ligne de commande = echo -n 4f2f | ./minicipher -k "146b0a724e1d3aa4d2ac" 2>&1
+    Sortie = a988
+    Ligne de commande = echo -n a988 | ./minicipher -d -k "146b0a724e1d3aa4d2ac" 2>&1
+    Sortie après déchiffrement = 4f2f
+         OK
+
+  Test 9
+    Clé = d49e976737b037da7f27
+    Entrée = 2e6f
+    Ligne de commande = echo -n 2e6f | ./minicipher -k "d49e976737b037da7f27" 2>&1
+    Sortie = 56a4
+    Ligne de commande = echo -n 56a4 | ./minicipher -d -k "d49e976737b037da7f27" 2>&1
+    Sortie après déchiffrement = 2e6f
+         OK
+
+  Test 10
+    Clé = 39d50b529a26e0517c87
+    Entrée = fac1
+    Ligne de commande = echo -n fac1 | ./minicipher -k "39d50b529a26e0517c87" 2>&1
+    Sortie = bf5c
+    Ligne de commande = echo -n bf5c | ./minicipher -d -k "39d50b529a26e0517c87" 2>&1
+    Sortie après déchiffrement = fac1
+         OK
+
+Test d'identité sur des mots de longueur arbitraire en mode CBC
+  Test sur 1 octets
+    Clé = 18ca5ac4d39fec72d06c
+    IV = 61b0
+    Entrée = 5
+    Ligne de commande = echo -n 5 | ./minicipher -M -i "61b0" -k "18ca5ac4d39fec72d06c" 2>&1
+    Sortie = 6db1
+    Ligne de commande = echo -n 6db1 | ./minicipher -d -M -i "61b0" -k "18ca5ac4d39fec72d06c" 2>&1
+    Sortie après déchiffrement = 5
+         OK
+
+  Test sur 2 octets
+    Clé = 4300a5d66f76570145f4
+    IV = 8557
+    Entrée = 67
+    Ligne de commande = echo -n 67 | ./minicipher -M -i "8557" -k "4300a5d66f76570145f4" 2>&1
+    Sortie = 0d33
+    Ligne de commande = echo -n 0d33 | ./minicipher -d -M -i "8557" -k "4300a5d66f76570145f4" 2>&1
+    Sortie après déchiffrement = 67
+         OK
+
+  Test sur 4 octets
+    Clé = dfd2f745042a7b4b3fde
+    IV = 94d7
+    Entrée = 2e92
+    Ligne de commande = echo -n 2e92 | ./minicipher -M -i "94d7" -k "dfd2f745042a7b4b3fde" 2>&1
+    Sortie = a3d2130e
+    Ligne de commande = echo -n a3d2130e | ./minicipher -d -M -i "94d7" -k "dfd2f745042a7b4b3fde" 2>&1
+    Sortie après déchiffrement = 2e92
+         OK
+
+  Test sur 5 octets
+    Clé = 086979cc9c30003a68f1
+    IV = 7a0c
+    Entrée = 4e1cb
+    Ligne de commande = echo -n 4e1cb | ./minicipher -M -i "7a0c" -k "086979cc9c30003a68f1" 2>&1
+    Sortie = 9516aac9
+    Ligne de commande = echo -n 9516aac9 | ./minicipher -d -M -i "7a0c" -k "086979cc9c30003a68f1" 2>&1
+    Sortie après déchiffrement = 4e1cb
+         OK
+
+  Test sur 25 octets
+    Clé = 18bd7b445ab31e1782ed
+    IV = f384
+    Entrée = 2bbc4d7045b86d1df7fbba985
+    Ligne de commande = echo -n 2bbc4d7045b86d1df7fbba985 | ./minicipher -M -i "f384" -k "18bd7b445ab31e1782ed" 2>&1
+    Sortie = 2540d8effb7386339bc0ee6b6deb
+    Ligne de commande = echo -n 2540d8effb7386339bc0ee6b6deb | ./minicipher -d -M -i "f384" -k "18bd7b445ab31e1782ed" 2>&1
+    Sortie après déchiffrement = 2bbc4d7045b86d1df7fbba985
+         OK
+
+  Test sur 26 octets
+    Clé = 6827da693243ba0ed427
+    IV = ab91
+    Entrée = 2fce0ce3bd67e9bbbf789547ed
+    Ligne de commande = echo -n 2fce0ce3bd67e9bbbf789547ed | ./minicipher -M -i "ab91" -k "6827da693243ba0ed427" 2>&1
+    Sortie = ab622a9e9745167081ad4a9d7d60
+    Ligne de commande = echo -n ab622a9e9745167081ad4a9d7d60 | ./minicipher -d -M -i "ab91" -k "6827da693243ba0ed427" 2>&1
+    Sortie après déchiffrement = 2fce0ce3bd67e9bbbf789547ed
+         OK
+
+  Test sur 17 octets
+    Clé = 5103b18bc8c534beabaf
+    IV = 47eb
+    Entrée = 29cea3f4994a7e11b
+    Ligne de commande = echo -n 29cea3f4994a7e11b | ./minicipher -M -i "47eb" -k "5103b18bc8c534beabaf" 2>&1
+    Sortie = ec8522c96fa3ae491611
+    Ligne de commande = echo -n ec8522c96fa3ae491611 | ./minicipher -d -M -i "47eb" -k "5103b18bc8c534beabaf" 2>&1
+    Sortie après déchiffrement = 29cea3f4994a7e11b
+         OK
+
+  Test sur 18 octets
+    Clé = 1ba7b6744e779d27f980
+    IV = 70d3
+    Entrée = c20016020c5974a99c
+    Ligne de commande = echo -n c20016020c5974a99c | ./minicipher -M -i "70d3" -k "1ba7b6744e779d27f980" 2>&1
+    Sortie = 57c6d23648c74d429c57
+    Ligne de commande = echo -n 57c6d23648c74d429c57 | ./minicipher -d -M -i "70d3" -k "1ba7b6744e779d27f980" 2>&1
+    Sortie après déchiffrement = c20016020c5974a99c
+         OK
+
+  Test sur 19 octets
+    Clé = d578b4d035003f4e2273
+    IV = 2583
+    Entrée = 09795ae823c52881f0d
+    Ligne de commande = echo -n 09795ae823c52881f0d | ./minicipher -M -i "2583" -k "d578b4d035003f4e2273" 2>&1
+    Sortie = 1bbb94b02548739fc809
+    Ligne de commande = echo -n 1bbb94b02548739fc809 | ./minicipher -d -M -i "2583" -k "d578b4d035003f4e2273" 2>&1
+    Sortie après déchiffrement = 09795ae823c52881f0d
+         OK
+
+  Test sur 32 octets
+    Clé = f80fc0cd5a3e767a287d
+    IV = ada1
+    Entrée = eee89d2bc6abe5f66e567f14ae49290a
+    Ligne de commande = echo -n eee89d2bc6abe5f66e567f14ae49290a | ./minicipher -M -i "ada1" -k "f80fc0cd5a3e767a287d" 2>&1
+    Sortie = 4b16845679102e9e897465bba39d5ce844e6
+    Ligne de commande = echo -n 4b16845679102e9e897465bba39d5ce844e6 | ./minicipher -d -M -i "ada1" -k "f80fc0cd5a3e767a287d" 2>&1
+    Sortie après déchiffrement = eee89d2bc6abe5f66e567f14ae49290a
+         OK
+
+Test d'identité sur des fichiers binaires aléatoires en mode CBC
+  Test sur 10 secteurs de 512 octets
+    Clé = a63eeffc7c9eed615e09
+    IV = 0f21
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "0f21" -k "a63eeffc7c9eed615e09" 2>&1 | ./minicipher -b -d -M -i "0f21" -k "a63eeffc7c9eed615e09" 2>&1 | cmp - <TEMPFILE>
+         OK
+
+  Test sur 20 secteurs de 512 octets
+    Clé = 453416e35595905e045c
+    IV = 8a30
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "8a30" -k "453416e35595905e045c" 2>&1 | ./minicipher -b -d -M -i "8a30" -k "453416e35595905e045c" 2>&1 | cmp - <TEMPFILE>
+         OK
+
+  Test sur 30 secteurs de 512 octets
+    Clé = d3d7820444dec2aa6c7e
+    IV = dcb7
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "dcb7" -k "d3d7820444dec2aa6c7e" 2>&1 | ./minicipher -b -d -M -i "dcb7" -k "d3d7820444dec2aa6c7e" 2>&1 | cmp - <TEMPFILE>
+         OK
+
+  Test sur 40 secteurs de 512 octets
+    Clé = a7ed283a6c8a265ef96a
+    IV = 5936
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "5936" -k "a7ed283a6c8a265ef96a" 2>&1 | ./minicipher -b -d -M -i "5936" -k "a7ed283a6c8a265ef96a" 2>&1 | cmp - <TEMPFILE>
+         OK
+
+  Test sur 50 secteurs de 512 octets
+    Clé = f4cc7dfc3ab75489698e
+    IV = 71da
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "71da" -k "f4cc7dfc3ab75489698e" 2>&1 | ./minicipher -b -d -M -i "71da" -k "f4cc7dfc3ab75489698e" 2>&1 | cmp - <TEMPFILE>
+         OK
+
+  Test sur 2048 secteurs de 512 octets
+    Clé = b9c59bfb1d87a22cc953
+    IV = 6a1f
+    Ligne de commande = cat <TEMPFILE> | ./minicipher -b -M -i "6a1f" -k "b9c59bfb1d87a22cc953" 2>&1 | ./minicipher -b -d -M -i "6a1f" -k "b9c59bfb1d87a22cc953" 2>&1 | cmp - <TEMPFILE>
+         OK
+

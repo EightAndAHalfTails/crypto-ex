@@ -1,0 +1,123 @@
+Test de la presence de l'executable
+OK
+Test du déchiffrement basique (un mot de 16 bits)
+  Test 1
+    Clé = 2dfa3d43161d99bbc314
+    Entrée = 82b9
+    Ligne de commande = echo -n 82b9 | ./minicipher -d -k "2dfa3d43161d99bbc314" 2>&1
+    Sortie = 0604
+
+  Test 2
+    Clé = 1074741572ff21292bb9
+    Entrée = fb2a
+    Ligne de commande = echo -n fb2a | ./minicipher -d -k "1074741572ff21292bb9" 2>&1
+    Sortie = 453e
+
+  Test 3
+    Clé = d2ba694e16d2235d823f
+    Entrée = 4a72
+    Ligne de commande = echo -n 4a72 | ./minicipher -d -k "d2ba694e16d2235d823f" 2>&1
+    Sortie = 7891
+
+  Test 4
+    Clé = e7526e92b677285dcfbe
+    Entrée = 6525
+    Ligne de commande = echo -n 6525 | ./minicipher -d -k "e7526e92b677285dcfbe" 2>&1
+    Sortie = 617d
+
+  Test 5
+    Clé = c20bf01b406d0cff358e
+    Entrée = a064
+    Ligne de commande = echo -n a064 | ./minicipher -d -k "c20bf01b406d0cff358e" 2>&1
+    Sortie = 4091
+
+  Test 6
+    Clé = 1e68376cf49f3a9c9c7a
+    Entrée = 45d5
+    Ligne de commande = echo -n 45d5 | ./minicipher -d -k "1e68376cf49f3a9c9c7a" 2>&1
+    Sortie = 5583
+
+  Test 7
+    Clé = fcbea85e883d41fa1aff
+    Entrée = 6c4e
+    Ligne de commande = echo -n 6c4e | ./minicipher -d -k "fcbea85e883d41fa1aff" 2>&1
+    Sortie = 25a2
+
+  Test 8
+    Clé = 146b0a724e1d3aa4d2ac
+    Entrée = 4f2f
+    Ligne de commande = echo -n 4f2f | ./minicipher -d -k "146b0a724e1d3aa4d2ac" 2>&1
+    Sortie = 3693
+
+  Test 9
+    Clé = d49e976737b037da7f27
+    Entrée = 2e6f
+    Ligne de commande = echo -n 2e6f | ./minicipher -d -k "d49e976737b037da7f27" 2>&1
+    Sortie = e01e
+
+  Test 10
+    Clé = 39d50b529a26e0517c87
+    Entrée = fac1
+    Ligne de commande = echo -n fac1 | ./minicipher -d -k "39d50b529a26e0517c87" 2>&1
+    Sortie = 04e7
+
+  Test 11
+    Clé = 18ca5ac4d39fec72d06c
+    Entrée = 61b0
+    Ligne de commande = echo -n 61b0 | ./minicipher -d -k "18ca5ac4d39fec72d06c" 2>&1
+    Sortie = ea4f
+
+  Test 12
+    Clé = 518d6e93a06c3a061b54
+    Entrée = 4300
+    Ligne de commande = echo -n 4300 | ./minicipher -d -k "518d6e93a06c3a061b54" 2>&1
+    Sortie = d525
+
+  Test 13
+    Clé = 8557af99f7c7e43d39db
+    Entrée = 6765
+    Ligne de commande = echo -n 6765 | ./minicipher -d -k "8557af99f7c7e43d39db" 2>&1
+    Sortie = f2e1
+
+  Test 14
+    Clé = dfd2f745042a7b4b3fde
+    Entrée = 94d7
+    Ligne de commande = echo -n 94d7 | ./minicipher -d -k "dfd2f745042a7b4b3fde" 2>&1
+    Sortie = dde3
+
+  Test 15
+    Clé = 2e9298b3ab557a837904
+    Entrée = 0869
+    Ligne de commande = echo -n 0869 | ./minicipher -d -k "2e9298b3ab557a837904" 2>&1
+    Sortie = 9648
+
+  Test 16
+    Clé = 7a0c5401659c8490db8b
+    Entrée = 4e1c
+    Ligne de commande = echo -n 4e1c | ./minicipher -d -k "7a0c5401659c8490db8b" 2>&1
+    Sortie = 571f
+
+  Test 17
+    Clé = 18bd7b445ab31e1782ed
+    Entrée = f384
+    Ligne de commande = echo -n f384 | ./minicipher -d -k "18bd7b445ab31e1782ed" 2>&1
+    Sortie = 43ef
+
+  Test 18
+    Clé = 2bbc4d7045b86d1df7fb
+    Entrée = 6827
+    Ligne de commande = echo -n 6827 | ./minicipher -d -k "2bbc4d7045b86d1df7fb" 2>&1
+    Sortie = 2e87
+
+  Test 19
+    Clé = ab91831950da20122432
+    Entrée = 2fce
+    Ligne de commande = echo -n 2fce | ./minicipher -d -k "ab91831950da20122432" 2>&1
+    Sortie = cbcb
+
+  Test 20
+    Clé = 5103b18bc8c534beabaf
+    Entrée = 47eb
+    Ligne de commande = echo -n 47eb | ./minicipher -d -k "5103b18bc8c534beabaf" 2>&1
+    Sortie = 7476
+

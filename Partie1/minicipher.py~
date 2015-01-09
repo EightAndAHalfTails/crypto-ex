@@ -1,0 +1,137 @@
+#!/usr/bin/python
+# -*- coding: latin-1 -*-
+
+########################################################
+# minicipher.py : texte à trou pour la première partie #
+########################################################
+
+
+###############
+# Chiffrement #
+###############
+
+
+# Définition des S-Box
+s = [0xe,0x4,0xd,0x1,0x2,0xf,0xb,0x8,
+     0x3,0xa,0x6,0xc,0x5,0x9,0x0,0x7]
+
+
+
+# Definition de la permutation
+perm = [0,4,8,12,
+        1,5,9,13,
+        2,6,10,14,
+        3,7,11,15]
+
+
+
+# Exécution d'une étape de chiffrement (à faire)
+def encrypt_round (input, key, do_perm):
+   """encrypt_round
+   Paramètres
+   ----------
+   input   : bloc en entrée de l'étape
+   key     : sous-clé de l'étape
+   do_perm : si True, indique qu'il faut exécuter la permutation
+             (permet de gérer la dernière étape sans permutation)
+   
+   Sortie
+   ------
+   la valeur de sortie de l'étape après calcul
+   """
+   
+   # Addition de la sous-clé d'étape
+   pass
+   
+   # Application des 4 S-Boxes
+   pass
+   
+   # Si on applique pas la permutation, on peut rendre le résultat
+   # tout de suite
+   pass
+   
+   # Sinon, on applique la permutation, en envoyant chaque bit de
+   # la sortie des S-Boxes vers sa destination réelle
+   pass
+
+
+
+
+# Chiffrement complet (à faire) #
+def encrypt (plaintext, keys):
+   """encrypt
+   Paramètres
+   ----------
+   plaintext : texte clair en entrée
+   keys      : tableau contenant les 5 sous-clés (i.e. la clé complète)
+   
+   Sortie
+   ------
+   la valeur du chiffré
+   """
+
+   pass
+
+
+
+
+#################
+# Déchiffrement #
+#################
+
+
+# Déclaration des opérations inverses des S-Box
+# et de la permutation
+s_inv = [0] * 16
+perm_inv = [0] * 16
+
+
+# Définition des opérations inverses des S-Box
+# et de la permutation (à faire)
+
+def init_inverse_ops ():
+   """Cette fonction remplit s_inv et perm_inv pour permettre le
+      déchiffrement.
+      Il faudra penser à appeler cette fonction AVANT toute
+      opération de déchiffrement.
+   """
+
+   # Il faut remplir s_inv et perm_inv pour permettre le
+   # déchiffrement
+   pass
+
+
+
+# Exécution d'une étape de déchiffrement (à faire)
+def decrypt_round (input, key, do_perm):
+   """decrypt_round
+   Paramètres
+   ----------
+   input   : bloc en entrée de l'étape
+   key     : sous-clé de l'étape
+   do_perm : si True, indique qu'il faut exécuter la permutation
+             (permet de gérer la première étape sans permutation)
+   
+   Sortie
+   ------
+   la valeur de sortie de l'étape après calcul
+   """
+   
+   pass
+
+
+
+# Déchiffrement complet (à faire)
+def decrypt (ciphertext, keys):
+   """decrypt
+   Paramètres
+   ----------
+   ciphertext : texte chiffré en entrée
+   keys       : tableau contenant les 5 sous-clés (i.e. la clé complète)
+   
+   Sortie
+   ------  
+   la valeur du clair
+   """
+
+   pass
