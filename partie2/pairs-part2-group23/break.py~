@@ -1,0 +1,15 @@
+from minicypher-correction import init_inverse_ops, s_inv
+import pairs.pairs_k5_0b00_0606 as pairs1
+import pairs.pairs_k5_000d_a0a0 as pairs2
+init_inverse_ops()
+
+mask = 0x0f0f
+
+for candidate in range(2**16):
+    if candidate and not mask != 0:
+        continue
+    else:
+        for C, Cp in pairs1:
+            T = C ^ candidate
+            Tp = Cp ^ candidate
+            

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- coding: latin-1 -*-
 
 import sys
@@ -74,7 +74,7 @@ def read_value (arg, nWords):
     for j in range (4):
       c = _4b_from_hexa (arg[4*i + j])
       if (c == 0xff):
-	raise SyntaxError
+        raise SyntaxError
       res[i] <<= 4
       res[i] |= c
 
@@ -102,12 +102,12 @@ def get_opts ():
 
     elif sys.argv[i][1]=='k':
       if len (sys.argv[i]) == 2:
-	if len (sys.argv) <= i+1:
-	  usage ("L'argument '-k' doit être suivi d'une clé de 20 caractères hexadécimaux.")
+        if len (sys.argv) <= i+1:
+          usage ("L'argument '-k' doit être suivi d'une clé de 20 caractères hexadécimaux.")
         i+=1
-	argument = sys.argv[i]
+        argument = sys.argv[i]
       else:
-	argument = sys.argv[i][2:]
+        argument = sys.argv[i][2:]
       try:
         keys = read_value (argument, 5)
       except SyntaxError:
@@ -115,12 +115,12 @@ def get_opts ():
       
     elif sys.argv[i][1]=='i':
       if len (sys.argv[i]) == 2:
-	if len (sys.argv) <= i+1:
-	  usage ("L'argument '-i' doit être suivi d'un IV de 4 caractères hexadécimaux.")
+        if len (sys.argv) <= i+1:
+          usage ("L'argument '-i' doit être suivi d'un IV de 4 caractères hexadécimaux.")
         i+=1
-	argument = sys.argv[i]
+        argument = sys.argv[i]
       else:
-	argument = sys.argv[i][2:]
+        argument = sys.argv[i][2:]
       try:
         iv = read_value (argument, 1)[0]
       except SyntaxError:
@@ -142,11 +142,11 @@ def get_16b_from_stdin (padding):
       next = sys.stdin.read(1)
       if (not next) or (_4b_from_hexa (next[0]) == 0xff):
         if padding:
-	    eof = True
-	    input.append ('8')
-            for j in range (4-len (input)):
-                input.append ('0')
-	    break
+          eof = True
+          input.append ('8')
+          for j in range (4-len (input)):
+            input.append ('0')
+          break
         else:
             raise SyntaxError
       input.append (next[0])
